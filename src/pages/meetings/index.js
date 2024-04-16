@@ -58,10 +58,9 @@ const Meetings = () => {
               </button>
               {/* DROPDOWN MENU */}
               {isDropdownOpen && (
-                <div className="absolute right-44 mt-14 w-56 rounded-md shadow-lg bg-white ring-1 ring-[#1f1c2f] focus:outline-none">
+                <div className="absolute right-24 mt-14 w-50 rounded-md shadow-lg bg-white ring-1 ring-[#1f1c2f] focus:outline-none">
                   <div className="py-1" role="none">
-                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Start Recording</a>
-                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900" role="menuitem">Real-time Translation</a>
+                    <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-gray-900" role="menuitem">Choose Language</a>
                   </div>
                 </div>
               )}
