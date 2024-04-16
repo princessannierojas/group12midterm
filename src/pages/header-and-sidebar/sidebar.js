@@ -18,7 +18,7 @@ const Sidebar = ({ isActive, toggleSidebar }) => {
             </div>
             
             {/* WEBPAGES */}
-            <div class="pt-10 ml-2">
+            <div className="pt-10 ml-2 overflow-y-auto">
                 <ul className="flex flex-col">
                     <li>
                     <Link href="/home">
@@ -68,18 +68,6 @@ const Sidebar = ({ isActive, toggleSidebar }) => {
                         </div>
                     </Link>
                     </li>
-                </ul>
-            </div>
-
-            {/* LOGOUT */}
-            <div className="mt-auto ml-2 mb-4">
-                <ul className="flex flex-col">
-                    <li>
-                    <div className="flex items-center text-white px-6 py-3">
-                            <img src="/user.jpg" alt="User" className="w-8 h-8 rounded-full mr-3"/>
-                            <span>Harry Styles</span>
-                        </div>
-                    </li>
 
                     <li>
                         <a href="#" className="flex items-center hover:text-colorViolet hover:font-hover-bold text-white hover:bg-gray-200 hover:rounded-l-full px-6 py-3 hover:cursor-pointer">
@@ -90,6 +78,18 @@ const Sidebar = ({ isActive, toggleSidebar }) => {
                             <span>Logout</span>
                         </a>
                     </li>
+                </ul>
+            </div>
+
+
+            <div className="mt-auto ml-2 mb-3 overflow-y-auto">
+                <ul className="flex flex-col">
+                    <li>
+                    <div className="flex items-center text-white px-6 py-3">
+                            <img src="/user.jpg" alt="User" className="w-8 h-8 rounded-full mr-3"/>
+                            <span>Harry Styles</span>
+                        </div>
+                    </li>                    
                 </ul>
             </div>
         </div>
