@@ -4,11 +4,11 @@ import Sidebar from '../../pages/header-and-sidebar/sidebar';
 
 const Meetings = () => {
   const [isActive, setIsActive] = useState(true);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(true);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleSidebar = () => {
     setIsActive(!isActive);
-    setIsDropdownOpen(!isDropdownOpen);
+    setIsDropdownOpen(false);
   };
 
   const toggleDropdown = () => {
@@ -58,7 +58,7 @@ const Meetings = () => {
                 </svg>
               </button>
               {/* DROPDOWN MENU */}
-              {!isDropdownOpen && (
+              {isDropdownOpen && (
                 <div className="absolute right-24 mt-14 w-50 rounded-md shadow-lg bg-white ring-1 ring-[#1f1c2f] focus:outline-none">
                   <div className="py-1" role="none">
                     <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-gray-900" role="menuitem">Choose Language</a>
