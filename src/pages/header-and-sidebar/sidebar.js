@@ -13,12 +13,26 @@ const Sidebar = ({ isActive, toggleSidebar }) => {
             </svg>
 
             {/* SIDEBAR HEADER */}
-            <div className="flex mt-12 py-0 ml-5">
-                <img src="/ms_logo.png" alt="Logo" className="w-44 h-11"/>
+            <div className="flex mt-14 py-0 ml-5">
+                <img src="/ms_logo.png" alt="Logo" className="w-46 h-12"/>
             </div>
+
+            <hr className="border-t border-gray-700 my-4 mx-6 mb-3"/>
+
+            {/* USER'S NAME */}
+            <div className="ml-2">
+                <ul className="flex flex-col">
+                    <div className="flex items-center text-white px-6 py-3">
+                        <img src="/user.jpg" alt="User" className="w-9 h-9 mr-3 rounded-md"/>
+                        <span>Harry Styles</span>
+                    </div>                   
+                </ul>
+            </div>
+
+            <hr className="border-t border-gray-700 my-4 mx-6 mt-3"/>
             
             {/* WEBPAGES */}
-            <div className="pt-10 ml-2 overflow-y-auto">
+            <div className="pt-0 ml-2 overflow-y-auto">
                 <ul className="flex flex-col">
                     <li>
                     <Link href="/home">
@@ -78,18 +92,6 @@ const Sidebar = ({ isActive, toggleSidebar }) => {
                             <span>Logout</span>
                         </a>
                     </li>
-                </ul>
-            </div>
-
-
-            <div className="mt-auto ml-2 mb-3 overflow-y-auto">
-                <ul className="flex flex-col">
-                    <li>
-                    <div className="flex items-center text-white px-6 py-3">
-                            <img src="/user.jpg" alt="User" className="w-8 h-8 rounded-full mr-3"/>
-                            <span>Harry Styles</span>
-                        </div>
-                    </li>                    
                 </ul>
             </div>
         </div>
