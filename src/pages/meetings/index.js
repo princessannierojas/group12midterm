@@ -4,10 +4,11 @@ import Sidebar from '../../pages/header-and-sidebar/sidebar';
 
 const Meetings = () => {
   const [isActive, setIsActive] = useState(true);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(true);
 
   const toggleSidebar = () => {
     setIsActive(!isActive);
+    setIsDropdownOpen(!isDropdownOpen);
   };
 
   const toggleDropdown = () => {
@@ -17,16 +18,17 @@ const Meetings = () => {
   return (
     <>
       <div className="relative">
-      <Header isActive={isActive} toggleSidebar={toggleSidebar} />
+        <Header isActive={isActive} toggleSidebar={toggleSidebar} />
       <div className="flex">
         <Sidebar isActive={isActive} toggleSidebar={toggleSidebar} />
-        {/* OVERLAY/DIMMING */}
+      <div className="flex">
         {!isActive && (
           <div
             className="fixed top-0 left-60 w-full h-full bg-black opacity-50 transition-opacity duration-300 z-10"
-            onClick={toggleSidebar}
-          ></div>
+            onClick={toggleSidebar}>
+          </div>
         )}
+      </div>
       </div>
       </div>
 
@@ -45,7 +47,6 @@ const Meetings = () => {
             <br/>
 
             <div className="flex justify-end mr-n-0.5">
-
               {/* VOICE RECORDER */}
               <button className="bg-white border border-[#1f1c2f] shadow-xl text-white font-bold py-1 px-3 mr-2 rounded-lg" title="Voice Recorder" onClick={toggleDropdown}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#1f1c2f" 
@@ -57,7 +58,7 @@ const Meetings = () => {
                 </svg>
               </button>
               {/* DROPDOWN MENU */}
-              {isDropdownOpen && (
+              {!isDropdownOpen && (
                 <div className="absolute right-24 mt-14 w-50 rounded-md shadow-lg bg-white ring-1 ring-[#1f1c2f] focus:outline-none">
                   <div className="py-1" role="none">
                     <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-200 hover:text-gray-900" role="menuitem">Choose Language</a>
