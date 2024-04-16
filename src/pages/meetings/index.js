@@ -38,8 +38,8 @@ const Meetings = () => {
         <div className="flex text-white justify-center"> 
           <div className="w-12/12">
             
-            <div className="bg-white p-1 rounded-2xl shadow-xl w-350">
-              <p className="text-content29 leading-loose text-colorViolet ml-3 font-hover-bold">
+            <div className="bg-white p-1 rounded-2xl shadow-xl mb-4 inline-block">
+              <p className="text-content29 leading-loose text-colorViolet ml-3 mr-3 font-hover-bold">
                 MEETINGS / Meeting1
               </p>
             </div>
