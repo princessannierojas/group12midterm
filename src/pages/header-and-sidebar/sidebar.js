@@ -24,7 +24,7 @@ const Sidebar = ({ isActive, toggleSidebar }) => {
                 <ul className="flex flex-col">
                     <div className="flex items-center text-white px-6 py-3">
                         <img src="/user.jpg" alt="User" className="w-9 h-9 mr-3 rounded-md"/>
-                        <span>User's Name</span>
+                        <span> UsersName </span>
                     </div>                   
                 </ul>
             </div>
